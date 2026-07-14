@@ -1,0 +1,23 @@
+- name: Skill Eval
+  # You may pin to the exact commit or the version.
+  # uses: skill-bench/skill-eval-action@5a97fc7cb9cf6c19b3102fc1a87a5a8bf7de53d1
+  uses: skill-bench/skill-eval-action@v0.5.0
+  with:
+    # Name of the skill to evaluate
+    skill-name: 
+    # Path to the skill directory (containing SKILL.md and evals/)
+    skill-path: 
+    # Anthropic API key for claude CLI
+    anthropic-api-key: 
+    # Minimum pass rate (0-100) to succeed
+    pass-threshold: # optional, default is 80
+    # Timeout per eval case in seconds
+    timeout: # optional, default is 120
+    # Post results as a PR comment
+    post-comment: # optional, default is true
+    # GitHub token for posting PR comments
+    github-token: # optional, default is ${{ github.token }}
+    # Upload eval-viewer HTML as an artifact
+    upload-viewer: # optional, default is true
+    # Node.js version for claude CLI installation
+    node-version: # optional, default is 22
